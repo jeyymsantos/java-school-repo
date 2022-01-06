@@ -1,0 +1,52 @@
+import java.util.*;
+public class PayrollSystem {
+
+	static Scanner input = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		
+		System.out.print("Enter name of Employee => " );
+		String name = input.nextLine();
+		
+		System.out.println("[P] Part-Time Employee " );
+		System.out.println("[F] Full-Time Employee \n" );
+		
+		System.out.print("Enter choice => " );
+		String choice = input.nextLine();
+		
+		if(choice == "P") PartTime(name);
+		else if(choice == "F") FullTime(name);
+		
+		
+	}
+	
+	public static void PartTime(String name) {
+		System.out.print("Enter rate per hour     => " );
+		double ratePerHour = input.nextDouble();
+		
+		System.out.print("Enter # of hours worked => " );
+		double noOfHoursWorked = input.nextDouble();
+		
+		System.out.print("Enter # of hours overtime => " );
+		double noOfHoursOvertime = input.nextDouble();
+		
+		double basicPay = ratePerHour * noOfHoursWorked;
+		double overtimePay = noOfHoursOvertime * (ratePerHour * 0.15);
+		
+		System.out.println("Employee Name : " + name);
+		System.out.println("Basic Pay     : " + basicPay);
+		System.out.println("Overtime Pay  : " + overtimePay);
+				
+	}
+	
+	public static void FullTime(String name) {
+		
+		System.out.print("Enter basic pay => " );
+		double pay = input.nextDouble();
+		
+		System.out.println("Employee Name : " + name);
+		System.out.println("Basic Pay     : " + pay);
+		
+	}
+
+}

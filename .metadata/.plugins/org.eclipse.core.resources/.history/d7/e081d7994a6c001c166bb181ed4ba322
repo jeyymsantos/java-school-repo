@@ -1,0 +1,32 @@
+
+public class recursionSir {
+
+	public static void main(String[] args) {
+		
+		int x = 5;
+		
+		descending(x);
+		System.out.println("- - - - - - - ");
+		ascending(x);
+	}
+	
+	
+	public static void descending(int num) {
+		if (num == 0) {
+			return;
+		}else {
+			System.out.println(num);
+			descending(num-1);
+		}
+	}
+	
+	public static void ascending(int num) {
+		if (num == 0) {
+			return;
+		}else {
+			ascending(num-1);
+			System.out.println(num);
+		}
+	}
+	
+}

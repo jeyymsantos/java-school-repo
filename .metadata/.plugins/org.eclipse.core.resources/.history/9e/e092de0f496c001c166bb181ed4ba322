@@ -1,0 +1,21 @@
+
+public class tryingRecursio {
+
+	public static void main(String[] args) {
+		
+		int x = 5;
+		descend(x);
+	}
+	
+	public static void descend(int num) {
+		if (num > 0) {
+			System.out.println(num);
+			descend(num-1);
+		}
+	}
+	
+	public static void ascend(int num) {
+		
+	}
+	
+}

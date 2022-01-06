@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class RecurcionActivity {
+	public static void main(String[] Jeyym) {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter a number => ");
+		int num = input.nextInt();
+		System.out.println("Summation => " + usingRecursion(num));	
+	}
+	
+	static int first = 0;
+	static int second = 1;
+	static int next = 0;
+	static int sum = 0;
+	static int y = 0;
+	
+	static int usingRecursion(int x) {
+		if(x > 0) {
+			y++;
+			System.out.println("F" + y + " -> " + first);
+			next = first + second;
+			first = second;
+			second = next;
+			
+			sum += (first-second);
+			
+			return usingRecursion(x-1);
+		}else {
+			return sum;
+		}
+	}
+	
+	static void usingLoop(int x) {
+		int first  = 0;
+		int second = 1;
+		int next = 0;
+		
+		for(int y = 0; y < x; y++) {
+			System.out.println(first);
+			next = first + second;
+			first = second;
+			second = next;
+		}
+	}
+}
